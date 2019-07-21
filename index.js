@@ -5,7 +5,7 @@ const wss = new WebSocket.Server({ port });
 wss.on("connection", (ws, req) => {
   console.log(
     "\x1b[36m%s\x1b[0m",
-    "Client connected: " + req.connection.remoteAddress
+    "New client connected: " + req.connection.remoteAddress
   );
 
   ws.on("message", function incoming(data) {
